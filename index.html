@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BMI Calculator: Calculate your BMI Now. If you want to calculate your body mass index then you are at right place. 
+    online BMI Calculator Website. Calculate your bmi in kgs, inch, pounds, metres.">
+    <meta name="keywords" content="Calculate BMI for Women, Calculate BMI for Men, Calculate BMI for adult, Calculate BMI for children. BMI Calculator in kgs, 
+    BMI Calculator in pounds, BMI Calculator in inch, BMI Calculator in metre, BMI Calculator in cm, BMI Calculator women, 
+    BMI Calculator men ">
+    <meta name="author" content="Ritik Raj">
+    <title>BMI Calculator - Calculate BMI Online Now</title>
+    <link rel="icon" href="bmi-calculator-site-icon.png" type="image">
+    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" media="screen and (max-width:1500px)" href="responsive.css">
+    <script src="bmi.js"></script>
+</head>
+<body>
+    <header>
+        <div id="logo"><a href="index.html"><img src="bmi-calculator-site-logo.png" alt="BMI Calculator"></a></div>
+    </header>
+    <div id="bmiintro">
+        <div id="heading"><h1>BMI Calculator: Calculate Your Body Mass Index.</h1></div>
+        <div id="description"><p>BMI Calculator: Calculate your BMI Now. If you want to calculate your body mass index then you are at right place. 
+            Calculate BMI for Women, Calculate BMI for Men, Calculate BMI for adult, Calculate BMI for children. BMI Calculator in kgs, BMI Calculator
+            in pounds, BMI Calculator in inch, BMI Calculator in metre, BMI Calculator in cm, BMI Calculator women, BMI Calculator men.
+        </p></div>
+    </div>
+    <div id="bmicalculator">
+        <div id="bmibox">
+            <div id="calculatorname"><h3>Body Mass Index (BMI) Calculator</h3></div>
+            <div id="inputbox">
+                <div class="userinput" id="input-in-cm">
+                    <label for="height-input"><b>Enter Your Height:</b></label>
+                    <input type="number" name="height" id="height-input" placeholder="enter cm">
+                    <select name="dropdown" id="unit-height" class="unit-option" onchange="func1()">
+                        <option value="in-cm">In cm</option>
+                        <option value="in-feet">In feet - inch</option>
+                    </select>
+                </div>
+                <div class="userinput" id="input-in-feet">
+                    <label for="height-input"><b>Enter Your Height:</b></label>
+                    <input type="number" name="height" id="height-input-feet" placeholder="enter feet">
+                    <input type="number" name="height" id="height-input-inch" placeholder=" enter inch">
+                    <select name="dropdown" id="unit-height-1" class="unit-option" onchange="func2()">
+                        <option value="in-feet">In feet - inch</option>
+                        <option value="in-cm">In cm</option>
+                        
+                        
+                    </select>
+                </div>
+                <div class="userinput">
+                    <label for="weight-input"><b>Enter Your Weight:</b></label>
+                    <input type="number" name="weight" id="weight-input">
+                    <select name="dropdown" id="unit-weight" class="unit-option">
+                        <option value="in-kgs">In Kgs</option>
+                        <option value="in-pound">In Pound</option>
+                    </select>
+                </div>
+                <div class="input-button">
+                    <button onclick="bmicalculate()">Calculate</button>
+                    <button onClick="window.location.reload();">Re-Check</button>
+                </div>
+
+            </div>
+        </div>
+        <div>
+            <p id="short-result">The BMI Index is:</p>
+            <p>Healthy BMI Range: 18.5 kg/m2 - 25kg/m2</p>
+            &nbsp;
+        </div>
+
+    </div>
+    <div id="full-result"></div>
+    <div id="contents">
+        <h2>BMI Introduction</h2><br><p>BMI is a measurement of a person's leanness or corpulence based on their height and weight, and is intended to quantify tissue mass. 
+        It is widely used as a general indicator of whether a person has a healthy body weight for their height. Specifically,
+        the value obtained from the calculation of BMI is used to categorize whether a person is underweight, normal weight, overweight, or obese depending on what range the value falls between. 
+        These ranges of BMI vary based on factors such as region and age, and are sometimes further divided into subcategories such as severely underweight or very severely obese.
+        Being overweight or underweight can have significant health effects, so while BMI is an imperfect measure of healthy body weight, it is a useful indicator of whether any additional testing or action is required.</p>
+        <br>
+        <h3>BMI table for adults</h3>
+        <br>
+        <p>This is the World Health Organization's (WHO) recommended body weight based on BMI values for adults. It is used for both men and women, age 18 or older.</p>
+        <br>
+        <table class="bmitable" align="center">
+            <tr><td class="tableheading">Category</td><td class="tableheading">BMI range - kg/m<sup>2</sup></td></tr>
+            <tr><td>Severe Thinness</td><td class="tablevalue">&lt; 16</td></tr>
+            <tr><td>Moderate Thinness</td><td class="tablevalue">16 - 17</td></tr>
+            <tr><td>Mild Thinness</td><td class="tablevalue">17 - 18.5</td></tr>
+            <tr><td>Normal</td><td class="tablevalue">18.5 - 25</td></tr>
+            <tr><td>Overweight</td><td class="tablevalue">25 - 30</td></tr>
+            <tr><td>Obese Class I</td><td class="tablevalue">30 - 35</td></tr>
+            <tr><td>Obese Class II</td><td class="tablevalue">35 - 40</td></tr>
+            <tr><td>Obese Class III</td><td class="tablevalue">&gt; 40</td></tr>
+        </table>
+        <br>
+        <h3>BMI chart for adults</h3>
+        <br>
+        <p>This is a graph of BMI categories based on the World Health Organization data. The dashed lines represent subdivisions within a major categorization.</p>
+        <p style="text-align:center;"><img id="bmi-graph" src="//d26tpo4cm8sb6k.cloudfront.net/img/bmi-chart.gif" width="529" height="441" /></p>
+        <br>
+        <h3>BMI table for children and teens, age 2-20</h3>
+        <br>
+        <p>The Centers for Disease Control and Prevention (CDC) recommends BMI categorization for children and teens between age 2 and 20.</p>
+        <table class="bmitable" align="center">
+            <tr><td class="tableheading">Category</td><td class="tableheading">Percentile Range</td></tr>
+            <tr><td>Underweight</td><td class="tablevalue">&lt;5%</td></tr>
+            <tr><td>Healthy weight</td><td class="tablevalue">5% - 85%</td></tr>
+            <tr><td>At risk of overweight</td><td class="tablevalue">85% - 95%</td></tr>
+            <tr><td>Overweight</td><td class="tablevalue">&gt;95%</td></tr>
+        </table>
+    </div>
+    <footer>&#169;copyright 2021. All Rights Reserved</footer>
+    
+</body>
+</html>

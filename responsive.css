@@ -1,0 +1,27 @@
+*{
+    margin: 0px;
+    padding: 0px;
+    text-align: center;
+}
+#bmicalculator{
+    width: 80%;
+}
+input{
+    margin:12px 0px 13px 0px;
+}
+.input-button{
+    flex-direction: column;
+}
+.unit-option{
+    margin: 0px;
+}
+#contents{
+    margin: 10px;
+}
+#bmiintro{
+    margin: 10px;
+}
+#bmi-graph{
+    width:200px;
+    height: 200px;
+}

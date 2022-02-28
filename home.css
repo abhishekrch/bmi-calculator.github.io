@@ -1,0 +1,104 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Public+Sans:wght@200&display=swap');
+
+*{
+    margin: 0px 50px;
+    padding:0px;
+    font-family: 'Public Sans', sans-serif;
+    font-size: 20px;
+}
+
+header{
+    background-color:rgb(202, 186, 186);
+}
+#logo img{
+    width: 245px;
+    height: 72px;
+    margin-left: 0px;
+}
+#bmicalculator {
+    border: 2px solid grey;
+    border-radius: 5px;
+    display: block;
+    padding:15px;
+    box-shadow: rgb(23 43 99 / 30%) 0 7px 28px;
+    background-color: #4accd1;
+    width: 60%;
+    margin: 20px auto;
+}
+#bmibox{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#input-in-feet{
+    display: none;
+}
+#input-in-cm{
+    display: block;
+}
+.input-button{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+.unit-option{
+    margin: 0px 0px 0px 142px;
+}
+#unit-height.unit-option{
+    border-radius:5px;
+}
+#unit-weight.unit-option{
+    border-radius:5px;
+}
+button{
+    border: 3px solid;
+    border-radius: 5px;
+    font-weight: bold;
+    width: 130px;
+    margin: 10px 22px;
+    padding: 4px;
+}
+button:hover{
+    color:white;
+    background-color: blue;
+    }
+button:active {
+    background-color: #3e8e41;
+    box-shadow: 0 5px #666;
+    transform: translateY(4px);
+}
+.userinput{
+    padding: 5px 0px;
+}
+input{
+    border: 3px solid rgb(133, 133, 216);
+    border-radius: 5px;
+    margin: 13px 0px 13px 68px;
+}
+#inputbox{
+    padding: 15px 53px;
+}
+#short-result{
+    font-weight: bold;
+    color: crimson;
+}
+#contents td{
+    border: 2px solid brown;
+    text-align: center;
+
+}
+.tableheading{
+    background-color: rgb(230, 16, 80);
+    font-weight: bold;
+}
+footer{
+    position: relative;
+    background-color: rgb(218, 168, 168);
+    margin-bottom: 0px;
+    text-align: center;
+    padding: 10px 0px;
+    font-size: 15px;
+}
